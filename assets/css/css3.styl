@@ -1,0 +1,153 @@
+@import 'nib/vendor'
+@import 'nib/gradients'
+
+vendor-prefixes = o ms moz webkit official
+
+verde = #2ecc71
+rojo = #c72232
+blanco = #f0f4f3
+
+.pika-thumbs
+  padding 0
+  margin 0
+  li
+    width 144px
+    height 74px
+    float left
+    list-style-type none
+    margin 5px
+    border 1px solid verde
+    cursor pointer
+
+    .clip
+      position relative
+      height 100%
+      text-align center
+      vertical-align center
+      overflow hidden
+
+.pika-stage
+  height 250px
+  background blanco
+  position relative
+  .main-image
+    position absolute
+    top 0px
+    left 0px
+  .pika-aniwrap
+    position absolute
+    top 0px
+    left 0px
+  .pika-ani
+    position relative
+    display none
+    z-index 2
+    margin 0
+  img
+    margin 0
+    padding 0
+    border 0
+    width 100%
+    height 100%
+  .caption
+    position absolute
+    background rgba(black,.8)
+    font-size 11px
+    color #fafafa
+    padding 10px
+    text-align right
+    bottom 10px
+    right 10px
+    p
+      padding 0
+      margin 0
+      line-height 14px
+
+.pikachoose
+  width 500px
+  margin 0
+
+.pika-imgnav
+  a
+    position absolute
+    text-indent -5000px
+    display block
+    z-index 3
+    cursor pointer
+    &.previous
+      width 20px
+      height 20px
+      opacity 0
+      -webkit-transition opacity 300ms linear
+      -webkit-transform rotate(-45deg)
+      -moz-transform rotate(-45deg)
+      transform rotate(-45deg)
+      top 45%
+      left 10px
+    &.next
+      width 20px
+      height 20px
+      opacity 0
+      -webkit-transition opacity 300ms linear
+      -webkit-transform rotate(45deg)
+      -moz-transform rotate(45deg)
+      transform rotate(45deg)
+      top 45%
+      right 10px
+    &:hover
+      opacity .6
+      -webkit-transition opacity 300ms linear
+    &.play
+      border-color transparent transparent rgba(255,255,255,.7)
+      border-style solid
+      border-width 0 0 25px 25px
+      height 0
+      width 0
+      position absolute
+      -webkit-transform rotate(-45deg)
+      -moz-transform rotate(-45deg)
+      transform rotate(-45deg)
+      top 14px
+      left 47%
+      display none
+    &.pause
+      display none
+      border-left 5px solid rgba(255,255,255,.7)
+      border-right 5px solid rgba(255,255,255,.8)
+      height 30px
+      width 14px
+      position absolute
+      top 10px
+      left 47%
+
+.pika-textnav
+  display none
+
+.pika-tooltip
+  font-size 12px
+  position absolute
+  color white
+  padding 3px
+  background-color rgba(0,0,0,0.7)
+
+
+.pika-counter
+  position absolute
+  bottom 15px
+  left 15px
+  color white
+  background rgba(0,0,0,0.7)
+  font-size 11px
+  padding 3px
+  -moz-border-radius 5px
+  border-radius 5px
+
+.jcarousel-skin-pika
+  .jcarousel-container-horizontal
+    padding 15px 20px
+    overflow hidden
+  .jcarousel-clip-horizontal
+    height 90px
+    width 485px
+  .jcarousel-item-horizontal
+    margin-right 10px
